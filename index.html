@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Панель — Smart Support Hub</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="dashboard">
+<div class="app">
+<aside id="sidebar" class="sidebar"></aside>
+<div class="main">
+<header id="topbar" class="topbar"></header>
+<main class="content">
+<section class="grid-kpi">
+<div class="card kpi"><span>Активные внедрения</span><b id="kpiDeployments">0</b></div>
+<div class="card kpi"><span>Открытые инциденты</span><b id="kpiIncidents">0</b></div>
+<div class="card kpi"><span>SLA выполнен</span><b id="kpiSla">0%</b></div>
+<div class="card kpi"><span>Текущая версия</span><b id="kpiVersion">—</b></div>
+</section>
+<section class="grid-charts">
+<div class="card"><h2>Инциденты по приоритетам</h2><div class="chart-box"><canvas id="priorityChart"></canvas></div></div>
+<div class="card"><h2>Заявки по видам сопровождения</h2><div class="chart-box"><canvas id="requestChart"></canvas></div></div>
+</section>
+</main>
+</div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

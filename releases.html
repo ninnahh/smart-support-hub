@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Релизы — Smart Support Hub</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="releases">
+<div class="app">
+<aside id="sidebar" class="sidebar"></aside>
+<div class="main">
+<header id="topbar" class="topbar"></header>
+<main class="content">
+<div class="card">
+<h2>Новый релиз</h2>
+<form id="releaseForm" class="row" novalidate>
+<label>Уровень изменений<select id="level"><option value="patch">patch — только исправления</option><option value="minor">minor — новая возможность</option><option value="major">major — несовместимые изменения</option></select></label>
+<label>Дата<input id="relDate" type="date"></label>
+<label style="grid-column:1/-1">Изменения (каждое с новой строки)<textarea id="relChanges" placeholder="Исправлено открытие отчёта"></textarea></label>
+<button class="btn" type="submit">Выпустить</button>
+</form>
+<p class="hint" id="nextVersionHint"></p>
+</div>
+<div id="releaseList"></div>
+</main>
+</div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/layout.js"></script>
+
+<script src="assets/js/releases.js"></script>
+</body>
+</html>

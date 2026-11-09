@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Заявки — Smart Support Hub</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="maintenance">
+<div class="app">
+<aside id="sidebar" class="sidebar"></aside>
+<div class="main">
+<header id="topbar" class="topbar"></header>
+<main class="content">
+<div class="card">
+<h2>Новая заявка на изменение</h2>
+<form id="requestForm" class="row" novalidate>
+<label>Описание<input id="reqTitle" type="text" placeholder="Что нужно изменить?"></label>
+<label>Вид<select id="reqType"><option value="corrective">Корректирующее</option><option value="adaptive">Адаптивное</option><option value="perfective">Совершенствующее</option><option value="preventive">Профилактическое</option></select></label>
+<label>Статус<select id="reqStatus"><option value="new">Новая</option><option value="planned">Запланирована</option><option value="done">Выполнена</option></select></label>
+<label>Целевая версия<input id="reqVersion" type="text" placeholder="v1.3.0"></label>
+<button class="btn" type="submit">Добавить</button>
+</form>
+</div>
+<div class="card">
+<h2>Заявки</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>ID</th><th>Описание</th><th>Вид</th><th>Статус</th><th>Целевая версия</th></tr></thead>
+<tbody id="requestTable"></tbody>
+</table></div>
+</div>
+</main>
+</div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/maintenance.js"></script>
+</body>
+</html>

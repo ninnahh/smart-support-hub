@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Внедрения — Smart Support Hub</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="deployments">
+<div class="app">
+<aside id="sidebar" class="sidebar"></aside>
+<div class="main">
+<header id="topbar" class="topbar"></header>
+<main class="content">
+<div class="card">
+<h2>Новое внедрение</h2>
+<form id="deploymentForm" class="row" novalidate>
+<label>Заказчик<input id="client" type="text" placeholder="Например, Колледж №1"></label>
+<label>Продукт<input id="product" type="text" placeholder="Название продукта"></label>
+<label>Версия<input id="version" type="text" placeholder="v1.2.1"></label>
+<label>Этап<select id="stage"><option value="planning">Планирование</option><option value="setup">Настройка</option><option value="training">Обучение</option><option value="production">Эксплуатация</option></select></label>
+<label>Ответственный<input id="owner" type="text" placeholder="Фамилия И."></label>
+<label>Плановая дата<input id="plannedDate" type="date"></label>
+<label>Выполнено задач<input id="done" type="number" min="0" value="0"></label>
+<label>Всего задач<input id="total" type="number" min="1" value="1"></label>
+<button class="btn" type="submit">Добавить</button>
+</form>
+</div>
+<div class="card">
+<h2>Список внедрений</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>ID</th><th>Заказчик</th><th>Продукт</th><th>Версия</th><th>Этап</th><th>Готовность</th><th>Ответственный</th><th>Дата</th></tr></thead>
+<tbody id="deploymentTable"></tbody>
+</table></div>
+</div>
+</main>
+</div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/layout.js"></script>
+
+<script src="assets/js/deployments.js"></script>
+</body>
+</html>
